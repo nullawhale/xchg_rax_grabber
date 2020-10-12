@@ -47,8 +47,8 @@ func main() {
 
 	url := conf.Url
 
-	for i, b := range make([]uint16, 64) {
-		fmt.Printf("Page: %d\n", i+1)
+	for b := range make([]uint16, 64) {
+		fmt.Printf("0x%02x\n", b)
 		s := fmt.Sprintf("%s%02x.html", url, b)
 		getXchg(s)
 	}
